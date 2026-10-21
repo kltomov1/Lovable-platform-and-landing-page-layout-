@@ -11,4 +11,4 @@
 
 - Keep the course landing page at `/` and the presentation at `/find-your-edge` so each experience remains independently accessible.
 - Presentation slides share one 1920×1080 scaling component and central content registry; global `--slide-*` tokens control their design.
-- The presentation’s current slide is URL-driven; placeholder preview timing is silent and must not be represented as recorded narration.
+- The presentation’s current slide is URL-driven; generated sample narration uses one continuous audio asset and a shared timestamp registry to keep slide changes synchronized without playback gaps.
