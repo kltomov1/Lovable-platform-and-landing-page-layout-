@@ -6,7 +6,7 @@ import { EdgeSlide, deck } from "@/components/presentation/EdgeSlide";
 import { SlideLayout } from "@/components/presentation/SlideLayout";
 
 export const Route = createFileRoute("/find-your-edge")({
-  validateSearch: (search: Record<string, unknown>) => ({ slide: Math.min(9, Math.max(1, Number(search.slide) || 1)), print: search.print === true || search.print === "true" }),
+  validateSearch: (search: Record<string, unknown>) => ({ slide: Math.floor(Math.min(9, Math.max(1, Number(search["slide"]) || 1))), print: search["print"] === true || search["print"] === "true" }),
   head: () => ({ meta: [
     { title: "Find Your Edge — A narrated presentation" },
     { name: "description", content: "Discover, own, and express your unique strengths in this nine-slide Find Your Edge presentation." },
