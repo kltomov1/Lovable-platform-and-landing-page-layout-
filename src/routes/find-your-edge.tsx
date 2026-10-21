@@ -79,7 +79,7 @@ function Presentation() {
   return <main className="presentation-app" ref={surface}>
     <audio ref={audio} src={sampleAudio.url} preload="auto" onLoadedMetadata={() => { if (audio.current) audio.current.currentTime = audioTiming.starts[index] ?? 0; }} onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)} onEnded={() => setPlaying(false)} onError={() => {setAudioError(true); setPlaying(false);}} onTimeUpdate={() => {
       const time = audio.current?.currentTime ?? 0;
-      const current = audioTiming.starts.findLastIndex(start => time >= start);
+      const current = audioTiming.starts.reduce((match, start, position) => time >= start ? position : match, -1);
       if (current >= 0 && current !== audioIndex.current) go(current, false);
     }}/>
     <header className="presentation-toolbar">
