@@ -1,4 +1,4 @@
 # Find Your Edge
 - [ ] Recreate the nine-slide presentation on a separate page.
-- [ ] Generate English narration and synchronize slides to one continuous audio track.
+- [ ] Add a clearly marked voiceover placeholder; do not generate narration yet.
 - [ ] Verify playback, seeking, fullscreen, and mobile layout.
