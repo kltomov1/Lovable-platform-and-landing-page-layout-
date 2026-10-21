@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
 export const Route = createFileRoute("/")({
@@ -46,7 +46,7 @@ function Index() {
         <div className="pointer-events-none absolute inset-0 bg-glow" />
         <nav className="relative mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
           <span className="font-bold tracking-tight">Course Name</span>
-          <a href="#pricing" className="text-sm text-muted-foreground hover:text-foreground">Pricing</a>
+          <div className="flex items-center gap-6"><Link to="/find-your-edge" search={{ slide: 1, print: false }} className="text-sm text-muted-foreground hover:text-foreground">Find Your Edge</Link><a href="#pricing" className="text-sm text-muted-foreground hover:text-foreground">Pricing</a></div>
         </nav>
         <div className="relative mx-auto max-w-5xl px-6 pb-28 pt-20 text-center md:pt-32">
           <p className="mx-auto w-fit rounded-full border px-4 py-1.5 text-xs text-muted-foreground">6-week online course · Next cohort starts soon</p>
