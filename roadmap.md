@@ -4,3 +4,4 @@
 - [x] Verify silent preview controls, slide navigation, fullscreen, and mobile layout.
 - [ ] Generate sample English voiceover audio and connect playback to slide navigation.
 - [ ] Verify audio playback, pause, restart, and slide advancement.
+- [ ] Check the presentation opens and provide a direct preview link.
